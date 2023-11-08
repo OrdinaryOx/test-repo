@@ -3,6 +3,7 @@ import { MealService } from '../meal.service';
 import { IMeal } from '@avans-nx-workshop/shared/api';
 import { Subscription } from 'rxjs';
 
+
 @Component({
     selector: 'avans-nx-workshop-meal-list',
     templateUrl: './meal-list.component.html',
