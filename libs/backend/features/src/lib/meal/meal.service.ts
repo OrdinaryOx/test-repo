@@ -14,9 +14,18 @@ export class MealService {
             description: 'Vega version of the famous spaghetti recipe.',
             isVega: true,
             dateServed: new Date(),
-            cook: "Janko Seremak",
-            sort: MealSort.Breakfast,
+            cook: "Gordon Ramsey",
+            sort: MealSort.Dinner,
         },
+        {
+            id: '1',
+            title: 'Hamburger',
+            description: 'Hamburger with cheese',
+            isVega: false,
+            dateServed: new Date(),
+            cook: "Jamie Oliver",
+            sort: MealSort.Dinner,
+        }
     ]);
 
     getAll(): IMeal[] {
