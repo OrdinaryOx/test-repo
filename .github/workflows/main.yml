@@ -26,24 +26,24 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-
+#change cd ?
       - name: Zip artifacts for deployment
         run: |
           echo ${GITHUB_WORKSPACE}
-          cd ${GITHUB_WORKSPACE}/dist/apps/data-api/ && zip ${GITHUB_WORKSPACE}/data-api-release.zip ./* -r
-          cd ${GITHUB_WORKSPACE}/dist/apps/share-a-meal-web/ && zip ${GITHUB_WORKSPACE}/share-a-meal-web-release.zip ./* -r
+          cd ${GITHUB_WORKSPACE}/dist/apps/data-api/ && zip ${GITHUB_WORKSPACE}/backend-api-release.zip ./* -r
+          cd ${GITHUB_WORKSPACE}/dist/apps/share-a-meal-web/ && zip ${GITHUB_WORKSPACE}/frontend-app-release.zip ./* -r
 
       - name: Upload frontend-app artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: frontend-app
-          path: share-a-meal-web-release.zip
+          path: frontend-app-release.zip
           
       - name: Upload backend-api artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: backend-api
-          path: data-api-release.zip
+          path: backend-api-release.zip
           
           
   deploy-frontend-app:
@@ -59,7 +59,7 @@ jobs:
           name: frontend-app
 
       - name: Unzip artifact for deployment
-        run: unzip share-a-meal-web-release.zip
+        run: unzip frontend-app-release.zip
         
       - name: Deploy to static azure web app
         id: builddeploy
@@ -87,7 +87,7 @@ jobs:
           name: backend-api
 
       - name: Unzip artifact for deployment
-        run: unzip data-api-release.zip
+        run: unzip backend-api-release.zip
        
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
