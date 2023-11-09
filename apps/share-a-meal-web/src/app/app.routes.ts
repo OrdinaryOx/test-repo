@@ -1,11 +1,10 @@
-import { Route, RouterModule } from '@angular/router';
+import { Route } from '@angular/router';
 
 
-import { NgModule } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { MealListComponent } from 'libs/share-a-meal/features/src/lib/meal/meal-list/meal-list.component';
 import { MealDetailComponent } from 'libs/share-a-meal/features/src/lib/meal/meal-detail/meal-detail.component';
-import { AboutComponent } from 'libs/share-a-meal/features/src/lib/meal/about/about.component';
+import { AboutComponent } from 'libs/share-a-meal/features/src/lib/about/about.component';
 
 //  export const appRoutes: Route[] = [
 //  {
@@ -39,15 +38,45 @@ import { AboutComponent } from 'libs/share-a-meal/features/src/lib/meal/about/ab
 
 export const appRoutes: Route[] = [
     {
+        // startup
+        path:'',
+        pathMatch:'full',
+        redirectTo: '/home'   
+    },
+
+    {
         path:'home',
+        pathMatch:'full',
         component:NxWelcomeComponent,
     },
     {
-        path:'meals',
-        component:MealListComponent,
+        path:'meal',
+        // pathMatch:'full',
+        loadChildren:() =>
+        import('@avans-nx-workshop/share-a-meal/features').then(
+            (esModule) => (esModule.FeaturesModule)
+        )
     },
+    // {
+    //     path:'meal/:id',
+    //     pathMatch:'full',
+    //     component: MealDetailComponent
+    // },
     {
         path:'about',
         component:AboutComponent,
-    }
+    },
+    {
+        path:'contact',
+        component:AboutComponent,
+    },
+    // {
+    //     // catch all
+    //     path:'**',
+    //     redirectTo:'home'
+    // },
 ]
+
+  //  loadChildren:() =>
+    //  import('@avans-nx-workshop/share-a-meal/user').then(
+    //   (esModule) => (esModule.UserModule))
