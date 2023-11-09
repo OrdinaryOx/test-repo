@@ -63,7 +63,7 @@ export const appRoutes: Route[] = [
     //     component: MealDetailComponent
     // },
     {
-        path:'about',
+        path:'about', 
         component:AboutComponent,
     },
     {
