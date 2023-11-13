@@ -5,7 +5,7 @@
 
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import {ApiResponseInterceptor} from '@avans-nx-workshop/backend/dto'
+import {ApiResponseInterceptor} from '@client-side-project/backend/dto'
 import { AppModule } from './app/app.module';
 import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.interface';
 

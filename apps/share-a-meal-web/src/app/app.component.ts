@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { FeaturesModule } from '@avans-nx-workshop/frontend/features'
-import { UiModule } from '@avans-nx-workshop/frontend/ui'
+import { FeaturesModule } from '@client-side-project/frontend/features'
+import { UiModule } from '@client-side-project/frontend/ui'
 
 
 

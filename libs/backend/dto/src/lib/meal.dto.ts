@@ -10,7 +10,7 @@ import {
     IUpdateMeal,
     IUpsertMeal,
     MealSort
-} from '@avans-nx-workshop/shared/api';
+} from '@client-side-project/shared/api';
 
 /**
  * Use the `Pick` utility type to extract only the properties we want for

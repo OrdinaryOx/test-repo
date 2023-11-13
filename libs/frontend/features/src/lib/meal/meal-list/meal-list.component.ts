@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MealService } from '../meal.service';
-import { IMeal } from '@avans-nx-workshop/shared/api';
+import { IMeal } from '@client-side-project/shared/api';
 import { Subscription } from 'rxjs';
 
 

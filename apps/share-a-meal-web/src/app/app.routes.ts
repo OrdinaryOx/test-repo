@@ -53,7 +53,7 @@ export const appRoutes: Route[] = [
         path:'meal',
         // pathMatch:'full',
         loadChildren:() =>
-        import('@avans-nx-workshop/frontend/features').then(
+        import('@client-side-project/frontend/features').then(
             (esModule) => (esModule.FeaturesModule)
         )
     },
@@ -78,5 +78,5 @@ export const appRoutes: Route[] = [
 ]
 
   //  loadChildren:() =>
-    //  import('@avans-nx-workshop/share-a-meal/user').then(
+    //  import('@client-side-project/share-a-meal/user').then(
     //   (esModule) => (esModule.UserModule))

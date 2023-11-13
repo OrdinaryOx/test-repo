@@ -1,7 +1,7 @@
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { map, catchError, tap } from 'rxjs/operators';
-import { ApiResponse, IMeal } from '@avans-nx-workshop/shared/api';
+import { ApiResponse, IMeal } from '@client-side-project/shared/api';
 import { Injectable } from '@angular/core';
 
 /**
