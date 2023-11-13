@@ -2,9 +2,9 @@ import { Route } from '@angular/router';
 
 
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { MealListComponent } from 'libs/share-a-meal/features/src/lib/meal/meal-list/meal-list.component';
-import { MealDetailComponent } from 'libs/share-a-meal/features/src/lib/meal/meal-detail/meal-detail.component';
-import { AboutComponent } from 'libs/share-a-meal/features/src/lib/about/about.component';
+import { MealListComponent } from 'libs/frontend/features/src/lib/meal/meal-list/meal-list.component';
+import { MealDetailComponent } from 'libs/frontend/features/src/lib/meal/meal-detail/meal-detail.component';
+import { AboutComponent } from 'libs/frontend/features/src/lib/about/about.component';
 
 //  export const appRoutes: Route[] = [
 //  {
@@ -53,7 +53,7 @@ export const appRoutes: Route[] = [
         path:'meal',
         // pathMatch:'full',
         loadChildren:() =>
-        import('@avans-nx-workshop/share-a-meal/features').then(
+        import('@avans-nx-workshop/frontend/features').then(
             (esModule) => (esModule.FeaturesModule)
         )
     },
