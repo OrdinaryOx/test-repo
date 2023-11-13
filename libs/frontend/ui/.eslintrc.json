@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "avansNxWorkshop",
+            "prefix": "ClientSideProject",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "avans-nx-workshop",
+            "prefix": "client-side-project",
             "style": "kebab-case"
           }
         ]

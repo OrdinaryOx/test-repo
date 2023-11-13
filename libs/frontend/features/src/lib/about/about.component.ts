@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'avans-nx-workshop-about',
+  selector: 'client-side-project-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })

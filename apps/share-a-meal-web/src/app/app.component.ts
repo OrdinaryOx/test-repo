@@ -9,7 +9,7 @@ import { UiModule } from '@client-side-project/frontend/ui'
 @Component({
   standalone: true,
   imports: [NxWelcomeComponent, RouterModule, FeaturesModule, UiModule],
-  selector: 'avans-nx-workshop-root',
+  selector: 'client-side-project-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

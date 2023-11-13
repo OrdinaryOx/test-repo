@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 
 
 @Component({
-    selector: 'avans-nx-workshop-meal-list',
+    selector: 'client-side-project-meal-list',
     templateUrl: './meal-list.component.html',
     styleUrls: ['./meal-list.component.css'],
 })
